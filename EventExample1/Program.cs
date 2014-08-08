@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace EventExample1
 {
+    //Add some remarks
     delegate void Cheeze();
+    public delegate void Del(Subj ob);
+
 
     class Program
     {
@@ -15,9 +18,14 @@ namespace EventExample1
             Nose nose = new Nose();
             nose.ItchingINTheNose += new Cheeze(nose.MethodCheeze);            
             nose.StartEvent();
-        }
+            Console.WriteLine("\n");
 
-                
+            Subj s = new Subj();
+            SomeClass sc = new SomeClass();
+
+            s.RegistrationMethod(sc.SomeMethod);
+            s.StartSituation();
+        }                
     }
 
     class Nose
