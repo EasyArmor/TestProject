@@ -11,7 +11,7 @@ namespace EventExample1
         private Del del;
 
         public void RegistrationMethod(Del d)
-        {           
+        {
             del += d;
         }
 
@@ -25,3 +25,4 @@ namespace EventExample1
         }
     }
 }
+
